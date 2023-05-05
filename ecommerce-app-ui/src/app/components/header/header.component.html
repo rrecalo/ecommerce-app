@@ -4,10 +4,10 @@
   <mat-icon [matBadge]="itemsQuantity" [matBadgeHidden]="!itemsQuantity" matBadgeColor="warn">shopping_cart</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <div class="p-3 divide-y divide-solid">
+    <div class="p-3 pb-1 divide-y divide-solid">
       <div class="pb-3 flex justify-between">
         <span class="mr-16">{{itemsQuantity}} items</span>
-        <a routerLink="cart">View Cart</a>
+        <!-- <a routerLink="cart">View Cart</a> -->
       </div>
       <div *ngIf="cart.items.length" class="py-3">
         <div *ngFor="let item of cart.items" class="flex justify-between font-light mb-2">
@@ -18,13 +18,14 @@
           Total:
           <span class="font-bold">{{ getTotal(cart.items) | currency}}</span>
         </div>
-        <div class="pt-3 flex justify-between">
-          <button (click)="onClearCart()" class="bg-red-500 text-white rounded-full w-9 h-9">
-            <mat-icon>remove_shopping_cart</mat-icon>
+        <div class="pt-5 px-2 flex justify-between">
+          <button routerLink="cart" mat-raised-button
+          class="bg-green-500 text-white rounded-lg w-20 h-10 text-xs" color="warn">
+            Checkout
           </button>
-          <button routerLink="cart"
-          class="bg-green-500 text-white rounded-full w-9 h-9">
-            <mat-icon>shopping_cart</mat-icon>
+          <button (click)="onClearCart()" mat-raised-button class="bg-red-500 text-white rounded-full w-30 h-10 text-xs"
+          >
+            Clear Cart
           </button>
         </div>
 

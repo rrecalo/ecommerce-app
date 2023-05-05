@@ -14,8 +14,10 @@ class="min-h-full max-w-7xl mx-auto border-x"
       [cols]="cols"
       [rowHeight]="rowHeight"
     >
-    <mat-grid-tile *ngFor="let product of products" >
+    <mat-grid-tile *ngFor="let product of products"
+    >
       <app-product-box
+      [@fadeAnimation]
       [product]="product"
       class="w-full" [fullWidthMode]="cols === 1"
       (addToCart)="onAddToCart($event)"

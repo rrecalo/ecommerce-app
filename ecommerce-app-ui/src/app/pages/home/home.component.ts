@@ -1,3 +1,4 @@
+import { trigger, transition, style, animate, state } from '@angular/animations';
 import { StoreService } from './../../services/store.service';
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
@@ -11,10 +12,23 @@ const ROWS_HEIGHT: {[id: number] : number } = {
 }
 
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  animations: [
+    trigger('fadeAnimation', [
+      transition(':enter', [
+        style({ opacity: 0 }), animate('300ms', style({ opacity: 1 }))]
+      ),
+      transition(':leave',
+        [style({ opacity: 1 }), animate('300ms', style({ opacity: 0 }))]
+      )
+    ])
+  ],
 })
+
 export class HomeComponent {
 
   cols = 3;
@@ -26,6 +40,7 @@ export class HomeComponent {
   productsSubscription: Subscription | undefined;
   categories: Array<string> | undefined;
   categorySubscription: Subscription | undefined;
+
 
   constructor(private cartService: CartService, private storeService : StoreService){}
 
