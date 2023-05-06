@@ -4,6 +4,8 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Cart, CartItem } from 'src/app/models/Cart.model';
 import { CartService } from 'src/app/services/cart.service';
 
+const STRIPE_REQUEST_SERVER_URL = "rr-ecommerce-api.azurewebsites.net/Checkout/Checkout";
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -68,7 +70,7 @@ export class CartComponent {
 
   onCheckout() : void {
     console.log(this.cart.items);
-    this.http.post('https://localhost:4242/Checkout/Checkout',
+    this.http.post(STRIPE_REQUEST_SERVER_URL,
       //items: JSON.stringify(this.cart.items)
       // {
       //   "items" : [
