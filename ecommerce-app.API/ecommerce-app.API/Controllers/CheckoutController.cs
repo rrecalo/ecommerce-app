@@ -39,7 +39,7 @@ public class CartItem
 
     public string name { get; set; } = string.Empty;
 
-    public long price { get; set; }
+    public decimal price { get; set; }
 
     public int quantity { get; set; }
 
@@ -53,7 +53,7 @@ namespace ecommerce_app.API.Controllers
     [Route("[controller]/[action]")]
     public class CheckoutController : ControllerBase
     {
-        const string APP_BASE_URL = "http://localhost:53181";
+        const string APP_BASE_URL = "http://localhost:55608";
 
         //// GET: /<controller>/
         //public IActionResult Index()

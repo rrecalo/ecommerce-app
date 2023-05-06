@@ -67,6 +67,7 @@ export class CartComponent {
   }
 
   onCheckout() : void {
+    console.log(this.cart.items);
     this.http.post('https://localhost:4242/Checkout/Checkout',
       //items: JSON.stringify(this.cart.items)
       // {
@@ -82,7 +83,6 @@ export class CartComponent {
       // }
       { "items" : this.cart.items}
     ).subscribe(async (res: any ) =>{
-      //console.log({ "items" : this.cart.items});
       //console.log(res);
       let stripe = await loadStripe('pk_test_51N44OYDf3xaTX0tLNUjMpD3XOM265eolQC7kPganvyKIizgULjgjdmc9b2EmgUrA5Vd6HEuaVFsGnBSZXoNIsCSN00v5QgK9nU');
       let a = stripe?.redirectToCheckout({

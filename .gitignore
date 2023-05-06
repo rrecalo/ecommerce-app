@@ -1,0 +1,15 @@
+
+*.pdb
+*.dll
+ecommerce-app.API/ecommerce-app.API/obj/Debug/net7.0/*.dll
+ecommerce-app.API/ecommerce-app.API/bin/Debug/net7.0/*.pdb
+ecommerce-app.API/ecommerce-app.API/obj/Debug/net7.0/ecommerce-app.API.dll
+ecommerce-app.API/ecommerce-app.API/bin/Debug/net7.0/ecommerce-app.API.dll
+ecommerce-app.API/ecommerce-app.API/bin/Debug/net7.0/ecommerce-app.API.pdb
+ecommerce-app.API/.DS_Store
+ecommerce-app.API/ecommerce-app.API/obj/Debug/net7.0/ref/ecommerce-app.API.dll
+ecommerce-app.API/ecommerce-app.API/obj/Debug/net7.0/refint/ecommerce-app.API.dll
+ecommerce-app.API/ecommerce-app.API/obj/Debug/net7.0/ecommerce-app.API.pdb
+ecommerce-app.API/ecommerce-app.API/obj/Debug/net7.0/ecommerce-app.API.dll
+ecommerce-app.API/ecommerce-app.API/bin/Debug/net7.0/ecommerce-app.API.pdb
+ecommerce-app.API/ecommerce-app.API/bin/Debug/net7.0/ecommerce-app.API.dll
