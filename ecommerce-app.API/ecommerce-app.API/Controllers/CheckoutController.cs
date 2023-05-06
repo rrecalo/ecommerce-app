@@ -53,7 +53,7 @@ namespace ecommerce_app.API.Controllers
     [Route("[controller]/[action]")]
     public class CheckoutController : ControllerBase
     {
-        const string APP_BASE_URL = "http://localhost:55608";
+        const string APP_BASE_URL = "https://rr-ecommerce-app.netlify.app/#";
 
         //// GET: /<controller>/
         //public IActionResult Index()
