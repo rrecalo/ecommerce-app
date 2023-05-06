@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { loadStripe } from '@stripe/stripe-js';
 import { Cart, CartItem } from 'src/app/models/Cart.model';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -42,7 +44,7 @@ export class CartComponent {
     });
   }
 
-  constructor(private cartService : CartService){}
+  constructor(private cartService : CartService, private http: HttpClient){}
 
   getTotal(items: Array<CartItem>) : number {
     return this.cartService.getTotal(items);
@@ -64,5 +66,30 @@ export class CartComponent {
     this.cartService.reduceQuantity(item);
   }
 
+  onCheckout() : void {
+    this.http.post('https://localhost:4242/Checkout/Checkout',
+      //items: JSON.stringify(this.cart.items)
+      // {
+      //   "items" : [
+      //     {
+      //       "product": "string",
+      //       "name": "string",
+      //       "price": 0,
+      //       "quantity": 0,
+      //       "id": "string"
+      //     }
+      //   ]
+      // }
+      { "items" : this.cart.items}
+    ).subscribe(async (res: any ) =>{
+      //console.log({ "items" : this.cart.items});
+      //console.log(res);
+      let stripe = await loadStripe('pk_test_51N44OYDf3xaTX0tLNUjMpD3XOM265eolQC7kPganvyKIizgULjgjdmc9b2EmgUrA5Vd6HEuaVFsGnBSZXoNIsCSN00v5QgK9nU');
+      let a = stripe?.redirectToCheckout({
+        sessionId: res.id
+      })
+      console.log(a);
+    });
+  }
 
 }

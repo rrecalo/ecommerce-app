@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "CM4KcXiOcqOyZg2J0lzY0hSmTNjxjsfqzNX7IEl3+gk=",
+  "Source": "ecommerce-app.API",
+  "BasePath": "_content/ecommerce-app.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ecommerce-app.API/wwwroot",
+      "Source": "ecommerce-app.API",
+      "ContentRoot": "/Users/robertrecalo/Desktop/ecommerce-app/ecommerce-app.API/ecommerce-app.API/wwwroot/",
+      "BasePath": "_content/ecommerce-app.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

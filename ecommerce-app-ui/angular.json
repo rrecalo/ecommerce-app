@@ -47,7 +47,10 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/cancel.html",
+              "src/assets/success.html",
+              "src/assets/checkout.html"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
@@ -110,7 +113,10 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/cancel.html",
+              "src/assets/success.html",
+              "src/assets/checkout.html"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",

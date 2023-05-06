@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title *ngIf="pageToView==='cancel'">Checkout canceled</title>
+  <title *ngIf="pageToView==='success'">Thanks for your order!</title>
+</head>
+<body>
+  <div class="w-1/3 h-[150px] bg-white rounded-lg p-5 flex flex-col justify-center gap-5">
+    <div class="font-light text-md px-4 text-center mb-0">
+      <span *ngIf="pageToView==='success'">We appreciate your business! If you have any questions, please email : </span>
+      <span *ngIf="pageToView==='cancel'">Forgot to add something to your cart? Shop around then come back to pay!</span>
+      <a *ngIf="pageToView==='success'" href="mailto:orders@example.com" class="font-bold">orders@example.com</a>
+    </div>
+    <div class="flex justify-center">
+    <button mat-raised-button color="warn" routerLink="/home" class="w-1/3 mx-auto rounded-2xl">{{pageToView==='success' ? 'Ok!': 'Back to Shopping'}}</button>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -27,6 +27,8 @@ import { CartService } from './services/cart.service';
 import { StoreService } from './services/store.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTreeModule} from '@angular/material/tree';
+import { StripeComponent } from './pages/stripe/stripe.component';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { MatTreeModule} from '@angular/material/tree';
     ProductsHeaderComponent,
     FiltersComponent,
     ProductBoxComponent,
-    CartComponent
+    CartComponent,
+    StripeComponent
   ],
   imports: [
     BrowserModule,

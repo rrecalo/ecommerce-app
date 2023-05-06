@@ -38,6 +38,12 @@ export class CartService {
     this._snackBar.open('Your cart was cleared.', 'Ok', { duration: 3000});
   }
 
+  checkoutCart() : void {
+    localStorage.removeItem('cart');
+    this.cart.next({ items: [] });
+    this._snackBar.open('Checkout Successful!', 'Ok', { duration: 3000});
+  }
+
   removeFromCart(item : CartItem, update = true) : Array<CartItem> {
     const filteredItems = this.cart.value.items.filter((_item) => _item.id !== item.id);
     if(update){
@@ -74,7 +80,7 @@ export class CartService {
   }
 
   reloadCart(items: string | undefined | null) : void {
-    console.log(items);
+    //console.log(items);
     if(items){
     let reloadedItems = JSON.parse(items);
     this.cart.next({ items : reloadedItems.items });
