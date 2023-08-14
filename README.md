@@ -1,5 +1,5 @@
 # ecommerce-app
-[live deploy, please wait for the server to spin-up when attempting to checkout](https://rr-ecommerce-app.netlify.app/)
+[live deploy -- server handling STRIPE authentication is no longer running, so checkout will not fully work!](https://rr-ecommerce-app.netlify.app/)
 
 A mock E-Commerce app built on <em>Angular</em> (Front-end) with the <em>Angular Material UI component library</em> and <em>ASP.NET Core</em> (Back-end) using <em>FakeStoreAPI</em> with <em>Stripe</em> checkout/payment integration
 
